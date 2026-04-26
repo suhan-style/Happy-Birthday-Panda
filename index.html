@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sakshi 🐼</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Satisfy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{overflow:hidden;background:#000;color:white;height:100vh;}
+
+/* BACKGROUND ANIMATION CONTAINER */
+.bg-animation{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  z-index:-1;
+}
+
+/* FLOATING ELEMENTS */
+.bg-animation span{
+  position:absolute;
+  display:block;
+  width:20px;
+  height:20px;
+  background:rgba(255, 105, 180, 0.2);
+  border-radius:50%;
+  animation: floatUp linear infinite;
+  bottom:-50px;
+  filter: blur(4px);
+}
+
+/* RANDOM POSITIONS + SPEED */
+.bg-animation span:nth-child(1){
+  left:10%;
+  animation-duration:12s;
+  width:15px;
+  height:15px;
+}
+.bg-animation span:nth-child(2){
+  left:25%;
+  animation-duration:18s;
+}
+.bg-animation span:nth-child(3){
+  left:40%;
+  animation-duration:14s;
+  width:25px;
+  height:25px;
+}
+.bg-animation span:nth-child(4){
+  left:60%;
+  animation-duration:20s;
+}
+.bg-animation span:nth-child(5){
+  left:75%;
+  animation-duration:16s;
+}
+.bg-animation span:nth-child(6){
+  left:90%;
+  animation-duration:22s;
+  width:18px;
+  height:18px;
+}
+
+/* FLOAT ANIMATION */
+@keyframes floatUp{
+  0%{
+    transform: translateY(0) scale(1);
+    opacity:0;
+  }
+  20%{
+    opacity:1;
+  }
+  100%{
+    transform: translateY(-110vh) scale(1.5);
+    opacity:0;
+  }
+}
+
+.edu-nsw-act-cursive {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.lobster-two-regular {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.amaranth-regular {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+
+.text-center {
+  text-align: center;
+}
+h1 {
+  margin-bottom: 20px;
+}
+.sub-heading {
+  font-family: cursive;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.mr-top {
+  margin-top: 40px !important;
+}
+
+.container{
+  width:100%;height:100vh;
+  position:relative;
+  display:flex;justify-content:center;align-items:center;
+}
+
+.cute-panda-inline {
+    width: 44px;
+}
+
+.cuite-panda {
+    width: 150px;
+    text-align: center;
+    border-radius: 50%;
+    background: azure;
+}
+.cuite-panda img {
+    width: 100px;
+}
+
+.cutie-frame img {
+    width: 150px;
+    text-align: center;
+}
+
+.slide{
+  position:absolute;width:100%;height:100%;
+  opacity:0;transition:0.5s;
+  display:flex;justify-content:center;align-items:center;flex-direction:column;
+}
+.slide.active{opacity:1;z-index:10;}
+
+/* CHAT (UNCHANGED) */
+.phone{width:350px;height:650px;border-radius:30px;overflow:hidden;display:flex;flex-direction:column;}
+.header{padding:12px;display:flex;align-items:center;background:#075E54;}
+.avatar{width:35px;height:35px;border-radius:50%;margin-right:10px;}
+.username{color:#fff;font-size:14px;}
+
+.chat{
+  flex:1;padding:12px;overflow-y:auto;
+  display:flex;flex-direction:column;scroll-behavior:smooth;
+  background:#efeae2 url("https://www.transparenttextures.com/patterns/white-diamond.png");
+}
+
+.msg-row{display:flex;margin-bottom:8px;align-items:flex-end;}
+.msg-avatar{width:25px;height:25px;border-radius:50%;margin:0 6px;}
+.female{background:url('img/female-avtar.jpeg') center/cover;}
+.male{background:url('img/male-avtar.jpeg') center/cover;}
+
+.message{max-width:70%;padding:10px 14px;border-radius:10px;font-size:13px;}
+.received{background:#fff;color:#000;}
+.sent{background:#dcf8c6;color:#000;}
+
+.typing{display:flex;background:#fff;padding:10px;border-radius:10px;}
+.dot{width:6px;height:6px;background:#999;border-radius:50%;margin:2px;animation:blink 1.4s infinite;}
+.dot:nth-child(2){animation-delay:.2s;}
+.dot:nth-child(3){animation-delay:.4s;}
+@keyframes blink{0%,80%,100%{opacity:0;}40%{opacity:1;}}
+
+.bottom{padding:10px;background:#f0f0f0;text-align:center;}
+#nextBtn{
+  display:none;padding:10px 20px;border:none;border-radius:20px;
+  background:#5b011b;color:white;cursor:pointer;
+}
+
+/* HEART */
+.heart-btn img{width:200px;cursor:pointer;transition:0.3s;}
+.slide-2-wrapper {
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* PUZZLE */
+.puzzle{
+  width:300px;height:300px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+}
+.tile{
+  background-image:url('img/puzzle-cover.jpeg');
+  background-size:300% 300%;
+  cursor:pointer;
+}
+
+/* SUCCESS */
+.success{margin-top:25px;opacity:0;transition:1s;text-align:center;}
+.success.show{opacity:1;}
+
+.mem-btn{
+  margin-top:15px;
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  background:#a855f7;
+  color:white;
+  cursor:pointer;
+}
+
+/* ===== MEMORIES (NEW PERFECT UI) ===== */
+.memories-section {
+    text-align: center;
+}
+.memories{
+  position:relative;
+  width:300px;
+  height:380px;
+  margin-top:25px;
+}
+
+.card{
+  position:absolute;
+  width:220px;
+  height:300px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  background:#fff;
+  border-radius:15px;
+  padding:8px;
+  transition:0.5s;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.photo{
+  width:100%;
+  height:100%;
+  border-radius:10px;
+  background-size:cover;
+  background-position:center;
+}
+
+.caption{
+  text-align:center;
+  margin-top:10px;
+}
+
+.caption-text{
+  opacity:0;
+  transition:0.3s ease;
+}
+
+/* ONLY CENTER CARD SHOWS CAPTION */
+.card.center .caption-text{
+  opacity:1;
+}
+
+/* OPTIONAL: dim side cards */
+.card.left .caption-text,
+.card.right .caption-text{
+  opacity:0;
+}
+
+/* DREAMY COLLAGE BACKGROUND */
+.memories-section::before{
+  content:"";
+  position:absolute;
+  width:140%;
+  height:140%;
+  top:-20%;
+  left:-20%;
+  
+  background:
+    url('img/01.jpeg') 10% 20%/120px no-repeat,
+    url('img/02.jpeg') 70% 10%/140px no-repeat,
+    url('img/11.jpeg') 30% 60%/110px no-repeat,
+    url('img/04.jpeg') 80% 70%/130px no-repeat,
+    url('img/08.jpeg') 50% 30%/120px no-repeat,
+    url('img/09.jpeg') 20% 80%/130px no-repeat,
+    url('img/05.jpeg') 60% 50%/140px no-repeat,
+    url('img/06.jpeg') 40% 10%/100px no-repeat;
+
+  opacity:0.18;
+  filter:blur(1px);
+  animation:floatCollage 25s ease-in-out infinite alternate;
+}
+
+/* smooth floating motion */
+@keyframes floatCollage{
+  0%{transform:translateY(-4%);}
+  50%{transform:translateY(4%);}
+  100%{transform:translateY(-4%);}
+}
+
+.memories-section::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+}
+
+/* bring content above overlay */
+.memories-section > *{
+  position:relative;
+  z-index:2;
+}
+
+/* caption */
+.caption{
+  margin-top:15px;
+  text-align:center;
+  color:#fff;
+}
+
+.caption-text{
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-size:15px;
+}
+
+.caption-date{
+  font-size:12px;
+}
+
+/* positions */
+.center{
+  transform:translate(-50%,-50%) scale(1);
+  z-index:3;
+}
+.left{
+  transform:translate(-130%,-50%) scale(0.85) rotate(-8deg);
+  opacity:0.6;
+  z-index:2;
+}
+.right{
+  transform:translate(30%,-50%) scale(0.85) rotate(8deg);
+  opacity:0.6;
+  z-index:2;
+}
+
+.swipe-note{
+  font-size:13px;
+  opacity:0.7;
+  margin-top:10px;
+}
+
+/* VIDEO PLAYER */
+.film-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    max-width: 300px;
+}
+.film-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+
+/* LETTER SECTION */
+.letter-container{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  height:100%;
+  padding:20px;
+}
+
+/* CARD STYLE (paper look) */
+.letter-card{
+  max-width:565px;
+  width:100%;
+  background: url(img/letter-card-bg.webp) no-repeat center #fdf6ec;
+  background-size: cover;
+  color:#333;
+  border-radius:20px;
+  padding:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  border:2px solid #d6edfd;
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.8s ease;
+}
+
+/* SHOW ANIMATION */
+.slide.active .letter-card{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* TEXT STYLE */
+.letter-text{
+  font-family: 'Amaranth';
+  font-size:16px;
+  line-height:1.6;
+  letter-spacing:0.2px;
+}
+.letter-text p {
+    padding-bottom: 1em;
+    font-family: cursive;
+}
+
+/* HOVER EFFECT */
+.letter-card:hover{
+  transform:translateY(-5px) scale(1.01);
+}
+
+
+@media (max-width : 575px) {
+  .sub-heading {
+    font-size: 18px;
+  }
+  .slide-2-wrapper p {
+    font-size: 14px;
+  }
+  .letter-text{
+    font-size:14px;
+    line-height: 1.5;
+  }
+  #memories-wrapper {
+    overflow: hidden;
+  }
+  .memories {
+    width: 100%;
+  }
+  .music-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .album-cover {
+    height: 150px;
+  }
+  .song-title {
+    font-size: 11px;
+  }
+  .letter-card {
+    padding: 15px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-animation">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="container">
+
+<!-- CHAT -->
+<div class="slide active">
+  <div class="phone">
+    <div class="header">
+      <div class="avatar female"></div>
+      <div class="username">Panda - 1<sup>st</sup> May</div>
+    </div>
+    <div class="chat" id="chat"></div>
+    <div class="bottom">
+      <button id="nextBtn">Let's Celebrate 🥳</button>
+      <audio id="birthdayMusic" src="audio/Happy-Birthday-Music.mp3" loop></audio>
+    </div>
+  </div>
+</div>
+
+<!-- HEART -->
+<div class="slide">
+  <div class="cutie-frame"><img src="img/gif-1.webp" alt="cutie-frame"></div>
+  <div class="slide-2-wrapper">
+    <h1 class="amaranth-regular text-center">A cute <img src="img/cutie-01.gif" alt="cute-panda" class="cute-panda-inline" /> panda was born today…</h1>
+    <h3 class="sub-heading text-center">a little lazy 💤, a lot dreamy 💭, and always craving coffee ☕</h3>
+    <p>Yes, it's YOU! A little surprise awaits for you...</p>
+    <p>Just pull the cheeks of panda 😜</p>
+  </div>
+  <div class="heart-btn" id="heartBtn">
+    <img src="img/panda-05.webp">
+  </div>
+</div>
+
+<!-- PUZZLE -->
+<div class="slide">
+  <div class="cuite-panda"><img src="img/cutie-02.gif" alt="cuite-panda-02"></div>
+  <p style="margin: 10px 0;">Let's see how smart you are...</p>
+  <h2>Solve Puzzle 💜</h2>
+  <div class="puzzle" id="puzzle"></div>
+
+  <div class="success" id="successMsg">
+    <p>Wow… you’re really smart 💜✨</p>
+    <button class="mem-btn" onclick="showSlide(3)">Let’s explore Memories 📸</button>
+  </div>
+</div>
+
+<!-- MEMORIES -->
+<div class="slide" id="memories-wrapper">
+  <div class="memories-section">
+
+    <h2>Our Beautiful Memories 💜</h2>
+    <p>Some Sweet Moments</p>
+    <div class="swipe-note">Swipe or drag to see more →</div>
+
+    <div class="memories" id="memories">
+
+      <div class="card center">
+        <div class="photo" style="background-image:url('img/01.jpeg');background-position: bottom;"></div>
+        <div class="caption">
+          <div class="caption-text">Banana Leaf - Southindian ✨</div>
+        </div>
+      </div>
+
+      <div class="card right">
+        <div class="photo" style="background-image:url('img/02.jpeg')"></div>
+        <div class="caption">
+          <div class="caption-text">Cute Random Clip ❤️</div>
+        </div>
+      </div>
+
+      <div class="card left">
+        <div class="photo" style="background-image:url('img/03.jpeg')"></div>
+        <div class="caption">
+          <div class="caption-text">Moments like this 🌙</div>
+        </div>
+      </div>
+
+      <div class="card right">
+        <div class="photo" style="background-image:url('img/05.jpeg');background-position: top;"></div>
+        <div class="caption">
+          <div class="caption-text">Coffee lover 🥰</div>
+        </div>
+      </div>
+
+      <div class="card left">
+        <div class="photo" style="background-image:url('img/06.jpeg')"></div>
+        <div class="caption">
+          <div class="caption-text">Our Beautiful Girl 😍</div>
+        </div>
+      </div>
+
+      <div class="card left">
+        <div class="photo" style="background-image:url('img/08.jpeg')"></div>
+        <div class="caption">
+          <div class="caption-text">Golmaal moment 😜</div>
+        </div>
+      </div>
+
+      <div class="card right">
+        <div class="photo" style="background-image:url('img/09.jpeg');background-position: center;"></div>
+        <div class="caption">
+          <div class="caption-text">CCD ☕</div>
+        </div>
+      </div>
+
+      <div class="card left">
+        <div class="photo" style="background-image:url('img/11.jpeg')"></div>
+        <div class="caption">
+          <div class="caption-text">Itni khushi 😁</div>
+        </div>
+      </div>
+
+      <div class="card right">
+        <div class="photo" style="background-image:url('img/12.jpeg');background-position: center;"></div>
+        <div class="caption">
+          <div class="caption-text">Foodie ❤️😋</div>
+        </div>
+      </div>
+
+      <div class="card left">
+        <div class="photo" style="background-image:url('img/10.jpeg')"></div>
+        <div class="caption">
+          <div class="caption-text">Picture perfect trio 🤩</div>
+        </div>
+      </div>
+
+      <div class="card right">
+        <div class="photo" style="background-image:url('img/gif-1.webp')"></div>
+        <div class="caption">
+          <div class="caption-text">Our cute panda 🐼</div>
+        </div>
+      </div>
+
+      <div class="card left">
+        <div class="photo" style="background-image:url('img/gif-2.webp')"></div>
+        <div class="caption">
+          <div class="caption-text">Tu khich meri photo 📸</div>
+        </div>
+      </div>
+
+      <div class="card right">
+        <div class="photo" style="background-image:url('img/gif-3.webp')"></div>
+        <div class="caption">
+          <div class="caption-text">Panda ke panjhe 💅</div>
+        </div>
+      </div>
+
+      <div class="card left">
+        <div class="photo" style="background-image:url('img/gif-4.webp')"></div>
+        <div class="caption">
+          <div class="caption-text">Wave dance 😂</div>
+        </div>
+      </div>
+
+      <div class="card right">
+        <div class="photo" style="background-image:url('img/gif-5.webp')"></div>
+        <div class="caption">
+          <div class="caption-text">Creative dance steps</div>
+        </div>
+      </div>
+
+      <div class="card right">
+        <div class="photo" style="background-image:url('img/gif-7.webp')"></div>
+        <div class="caption">
+          <div class="caption-text">Dramebaaz 🤪</div>
+        </div>
+      </div>
+
+      <div class="card left">
+        <div class="photo" style="background-image:url('img/gif-8.webp')"></div>
+        <div class="caption">
+          <div class="caption-text">Chori chori chupke chupke 😅</div>
+        </div>
+      </div>
+
+      <div class="card right">
+        <div class="photo" style="background-image:url('img/gif-9.webp');background-position: center;"></div>
+        <div class="caption">
+          <div class="caption-text">Candid clicks 😂</div>
+        </div>
+      </div>
+
+      <div class="card left">
+        <div class="photo" style="background-image:url('img/gif-10.webp')"></div>
+        <div class="caption">
+          <div class="caption-text">Colgate marketing 😁</div>
+        </div>
+      </div>
+
+    </div>
+
+    <button id="memBtn" class="mem-btn mr-top" onclick="showSlide(4)">Explore Moments in Video 📽️</button>
+  </div>
+</div>
+
+
+<!-- MUSIC ALBUM -->
+<div class="slide">
+  <h2>Our Special Moment 📽️</h2>
+
+  <div class="film-wrapper">
+    <video controls playsinline>
+      <source src="img/film.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <button class="mem-btn" onclick="showSlide(5)">A Special Message 💌</button>
+</div>
+
+<!-- BIRTHDAY MESSAGE -->
+<div class="slide">
+  <div class="letter-container">
+
+    <div class="cuite-panda"><img src="img/panda-04.webp" alt="cuite-panda-04"></div>
+
+    <div class="letter-card">
+      <div class="letter-text">
+        <p><strong>Dearest Sakhi,</strong></p>
+
+        <p>Today becomes special as you were born on this day.💜</p>
+
+        <p>Yes... Happy Birthday Sakhi 🎉</p>
+
+        <p>We wish all your dreams come true—and that we get to be a part of some of them to share those moments with you.😜</p>
+
+        <p>Our trio isn’t just a friendship, it's a priceless bond beyond friendship. So, we are always there for you whenever you need us on your journey.🤗</p>
+
+        <p>Lot's of love 💕🥰 and hugs 🤗💜 for you to make you Smile Today, Tomorrow and Everyday... 🥳</p>
+
+        <p>The Birthday Girl... The Special Girl...Our Panda... 🐼</p>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+<script>
+
+/* SLIDES */
+let slides=document.querySelectorAll(".slide");
+let current=0;
+function showSlide(i){
+  slides[current].classList.remove("active");
+  current=i;
+  slides[current].classList.add("active");
+}
+
+/* CHAT SAME */
+const messages=[
+  {text:"Hey P🐼nda",type:"sent"},
+  {text:"Heyyy Himu",type:"received"},
+  {text:"Me & Sanju have made something special for you ʕ•ᴥ•ʔ",type:"sent"},
+  {text:"Really? 🔴⚈ ․̫⚈🔴",type:"received"},
+  {text:"Yup...Today is all about you 🐼🎀",type:"sent"},
+  {text:"Aww 😊",type:"received"},
+  {text:"Happy Birthday Sakshi 🥳🎁",type:"sent"},
+  {text:"☆✨🤍🐼🤍✨☆",type:"sent"}
+];
+
+let index=0;
+const chat=document.getElementById("chat");
+const nextBtn=document.getElementById("nextBtn");
+
+function showTyping(){
+  let div=document.createElement("div");
+  div.className="msg-row";
+  div.id="typing";
+  div.innerHTML=`<div class="msg-avatar female"></div>
+  <div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
+  chat.appendChild(div);
+}
+
+function showTypingSent(){
+  let div=document.createElement("div");
+  div.className="msg-row";
+  div.id="typing";
+
+  div.style.justifyContent="flex-end";
+
+  div.innerHTML=`
+    <div class="typing" style="background:#dcf8c6;">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="msg-avatar male"></div>
+  `;
+
+  chat.appendChild(div);
+  chat.scrollTop=chat.scrollHeight;
+}
+
+function removeTyping(){let t=document.getElementById("typing");if(t)t.remove();}
+
+function showMessage(msg){
+  if(msg.type==="received"){
+    chat.innerHTML+=`<div class="msg-row"><div class="msg-avatar female"></div><div class="message received">${msg.text}</div></div>`;
+  }else{
+    chat.innerHTML+=`<div class="msg-row" style="justify-content:flex-end;"><div class="message sent">${msg.text}</div><div class="msg-avatar male"></div></div>`;
+  }
+  chat.scrollTop=chat.scrollHeight;
+}
+
+function startChat(){
+  if(index>=messages.length){
+    nextBtn.style.display="inline-block";
+    return;
+  }
+
+  let msg=messages[index];
+
+  if(msg.type==="received"){
+    showTyping();
+    setTimeout(()=>{
+      removeTyping();
+      showMessage(msg);
+      index++;
+      startChat();
+    },1500);
+
+  } else {
+
+    // NEW: sender typing effect
+    showTypingSent();
+
+    setTimeout(()=>{
+      removeTyping();
+      showMessage(msg);
+      index++;
+      startChat();
+    },1500);
+  }
+}
+startChat();
+
+nextBtn.onclick=()=>showSlide(1);
+document.getElementById("heartBtn").onclick=()=>showSlide(2);
+
+/* PUZZLE */
+const puzzle=document.getElementById("puzzle");
+const successMsg=document.getElementById("successMsg");
+
+let tiles=[0,1,2,3,4,5,6,7,8].sort(()=>Math.random()-0.5);
+
+function renderPuzzle(){
+  puzzle.innerHTML="";
+  tiles.forEach((pos,i)=>{
+    let tile=document.createElement("div");
+    tile.className="tile";
+    tile.draggable=true;
+
+    let x=(pos%3)*50;
+    let y=Math.floor(pos/3)*50;
+    tile.style.backgroundPosition=`${x}% ${y}%`;
+
+    tile.ondragstart=e=>e.dataTransfer.setData("text",i);
+    tile.ondragover=e=>e.preventDefault();
+    tile.ondrop=e=>{
+      let from=e.dataTransfer.getData("text");
+      [tiles[from],tiles[i]]=[tiles[i],tiles[from]];
+      renderPuzzle();
+      checkWin();
+    };
+
+    puzzle.appendChild(tile);
+  });
+}
+
+function checkWin(){
+  if(tiles.every((v,i)=>v===i)){
+    puzzle.style.gap="0px";
+    successMsg.classList.add("show");
+  }
+}
+renderPuzzle();
+
+/* ===== FIXED SWIPE (MOUSE + TOUCH) ===== */
+let cards=document.querySelectorAll(".card");
+let currentIndex=0;
+let startX=0;
+
+function updateCards(){
+  cards.forEach(c=>c.className="card");
+
+  cards[currentIndex].classList.add("center");
+  cards[(currentIndex+1)%cards.length].classList.add("right");
+  cards[(currentIndex-1+cards.length)%cards.length].classList.add("left");
+}
+
+function next(){
+  currentIndex=(currentIndex+1)%cards.length;
+  updateCards();
+}
+
+function prev(){
+  currentIndex=(currentIndex-1+cards.length)%cards.length;
+  updateCards();
+}
+
+/* touch */
+document.getElementById("memories").addEventListener("touchstart",e=>{
+  startX=e.touches[0].clientX;
+});
+document.getElementById("memories").addEventListener("touchend",e=>{
+  let endX=e.changedTouches[0].clientX;
+  if(startX-endX>50) next();
+  if(endX-startX>50) prev();
+});
+
+/* mouse drag */
+document.getElementById("memories").addEventListener("mousedown",e=>{
+  startX=e.clientX;
+});
+document.getElementById("memories").addEventListener("mouseup",e=>{
+  let endX=e.clientX;
+  if(startX-endX>50) next();
+  if(endX-startX>50) prev();
+});
+
+updateCards();
+
+
+// 🎵 AUDIO PLAYER
+  const music = document.getElementById("birthdayMusic");
+
+  // Play music
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    music.volume = 1; // reset volume in case it was faded before
+    music.play();
+  });
+
+  // Fade out function
+  function fadeOut(audio, duration = 2000) {
+    const steps = 20;
+    const stepTime = duration / steps;
+    const volumeStep = audio.volume / steps;
+
+    const fade = setInterval(() => {
+      if (audio.volume > volumeStep) {
+        audio.volume -= volumeStep;
+      } else {
+        audio.volume = 0;
+        audio.pause();
+        audio.currentTime = 0; // optional reset
+        clearInterval(fade);
+      }
+    }, stepTime);
+  }
+
+  // Stop with fade on memory button
+  document.getElementById("memBtn").addEventListener("click", () => {
+    fadeOut(music, 2000); // 2-second fade
+  });
+
+</script>
+
+</body>
+</html>
